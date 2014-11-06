@@ -1,0 +1,44 @@
+import java.util.Scanner;
+/**
+ * Write a description of class diamond here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Diamond
+{
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a number of sides: ");
+        int s = in.nextInt();
+        int longSide = 2 * s -1;
+        for (int i = s-1; i > -1; i --)
+        {
+            int z = longSide - (2 * i);
+            for (int p = 1; p <=i;p++)
+            {
+                System.out.print(" ");
+            }
+            for (int q = 1; q <= z; q++)
+            {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+        for (int i = s-2; i > -1; i --)
+        {
+            int z = longSide - (2 * i);
+            for (int r = 1; r <= i; r--)
+            {
+                System.out.print(" ");
+            }
+            for (int t = longSide - 2; t > z ; t --)
+            {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+
+    }
+}
